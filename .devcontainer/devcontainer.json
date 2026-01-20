@@ -1,0 +1,17 @@
+{
+	"name": "LaTeX Build Container",
+	"build": {
+		"context": "..",
+		"dockerfile": "../Dockerfile"
+	},
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "james-yu.latex-workshop"
+            ]
+        }
+    },
+	"features": {
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	}
+}
