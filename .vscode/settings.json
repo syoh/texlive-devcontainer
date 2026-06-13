@@ -37,7 +37,14 @@
         "*.synctex.gz"
     ],
     "latex-workshop.latex.outDir": "export",
+    "latex-workshop.latex.recipe.default": "first",
     "latex-workshop.latex.recipes": [
+        {
+            "name": "pdflatex",
+            "tools": [
+                "pdflatex"
+            ]
+        },
         {
             "name": "latexmk",
             "tools": [
@@ -46,6 +53,16 @@
         },
     ],
     "latex-workshop.latex.tools": [
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-interaction=nonstopmode",
+                "-synctex=1",
+                "-output-directory=%OUTDIR%",
+                "%DOC%"
+            ],
+        },
         {
             "name": "latexmk",
             "command": "latexmk",
