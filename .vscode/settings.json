@@ -67,6 +67,13 @@
             ],
         },
         {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%OUTDIR%/%DOCFILE%"
+            ],
+        },
+        {
             "name": "latexmk",
             "command": "latexmk",
             "args": [
