@@ -1,9 +1,22 @@
 {
+    //"editor.wordWrap": "off",
+    //"files.exclude": {
+    //    "**/*.aux": true,
+    //    "**/*.fls": true,
+    //    "**/*.fdb_latexmk": true,
+    //    "**/*.bbl": true,
+    //    "**/*.blg": true,
+    //    "**/*.out": true,
+    //    "**/*.soc": true,
+    //    "**/*.loc": true,
+    //    "**/*.log": true,
+    //},
     "[tex]": {
         "editor.suggest.snippetsPreventQuickSuggestions": false,
         "editor.tabSize": 2
     },
     "[latex]": {
+        "editor.wordWrap": "on",
         "editor.suggest.snippetsPreventQuickSuggestions": false,
         "editor.tabSize": 2
     },
@@ -13,6 +26,7 @@
     "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
     "latex-workshop.intellisense.package.enabled": true,
+    "latex-workshop.latex.autoClean.run": "onSucceeded",
     "latex-workshop.latex.clean.fileTypes": [
         "*.aux",
         "*.bbl",
@@ -31,12 +45,13 @@
         "*.gls",
         "*.ist",
         "*.fls",
+        "*.loc",
+        "*.soc",
         "*.log",
         "*.fdb_latexmk",
         "*.snm",
         "*.nav",
         "*.dvi",
-        "*.synctex.gz"
     ],
     "latex-workshop.latex.outDir": "export",
     "latex-workshop.latex.recipe.default": "first",
@@ -62,8 +77,9 @@
             "name": "pdflatex",
             "command": "pdflatex",
             "args": [
-                "-interaction=nonstopmode",
                 "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
                 "-output-directory=%OUTDIR%",
                 "%DOC%"
             ],
@@ -79,7 +95,10 @@
             "name": "latexmk",
             "command": "latexmk",
             "args": [
-                "-silent",
+                "-pdf",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
                 "-outdir=%OUTDIR%",
                 "%DOC%"
             ],
