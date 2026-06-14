@@ -7,7 +7,12 @@
     "customizations": {
         "vscode": {
             "extensions": [
-                "james-yu.latex-workshop"
+                "james-yu.latex-workshop",
+								"ltex-plus.vscode-ltex-plus",
+								"iamhyc.overleaf-workshop",
+								"mushan.vscode-paste-image",
+								"pwintz.dryer-lint",
+								"christian-kohler.path-intellisense"
             ]
         }
     },

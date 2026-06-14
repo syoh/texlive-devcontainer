@@ -10,6 +10,8 @@
     "[bibtex]": {
         "editor.tabSize": 2
     },
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
     "latex-workshop.intellisense.package.enabled": true,
     "latex-workshop.latex.clean.fileTypes": [
         "*.aux",
